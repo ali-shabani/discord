@@ -28,20 +28,4 @@ class SetPropertyText extends TestCase
         $this->assertArrayHasKey('type', $embed->toArray());
     }
 
-
-    public function test()
-    {
-        $res = WebhookMessage::embeds([
-            Embed::title('this is title')
-                ->footer(Footer::text('alish'))
-                ->fields([
-                    Field::name('name')
-                        ->value('value')
-                ])
-                ->author(Author::name('ali'))
-                ->hexColor('BCB6FF')
-        ])
-            ->send('https://discordapp.com/api/webhooks/702775238361874462/HY7EBxUOhYzBIdYTDubO4rrkgNgMBcSfb0KDoK_Q2i92cQ8cLyjx78OrSaqrBt4CQZ56');
-    }
-
 }
